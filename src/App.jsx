@@ -9,7 +9,7 @@ function App() {
   const [prefectures, setPrefectures] = useState([]);
   //apiから都道府県のデータの取得
   useEffect(() => {
-    const API_KEY = '8FzX5qLmN3wRtKjH7vCyP9bGdEaU4sYpT6cMfZnJ';
+    const API_KEY = import.meta.env.VITE_YUMEMI_API_KEY
     const API_URL = '/api/v1/prefectures';
     
 
@@ -43,7 +43,7 @@ function App() {
   const [poplation, setPopulation] = useState([]);
   //apiから人口のデータの取得
   useEffect(() => {
-    const API_KEY ='8FzX5qLmN3wRtKjH7vCyP9bGdEaU4sYpT6cMfZnJ';
+    const API_KEY = import.meta.env.VITE_YUMEMI_API_KEY
     const API_URL = '/api/v1/population/composition/perYear';
     if(selectedCodes.length == 0){
       setPopulation([]);
